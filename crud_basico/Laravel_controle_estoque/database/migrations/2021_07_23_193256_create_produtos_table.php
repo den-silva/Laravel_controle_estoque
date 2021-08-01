@@ -19,6 +19,7 @@ class CreateProdutosTable extends Migration
             $table->decimal('custo', 19, 2);
             $table->decimal('preco', 19, 2);
             $table->integer('quantidade');
+            $table->string('cor');
             $table->timestamps();
         });
     }
