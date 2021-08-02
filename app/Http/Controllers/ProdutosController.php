@@ -17,10 +17,13 @@ class ProdutosController extends Controller
             'custo' => str_replace(",",".",$request->custo),
             'preco' =>  str_replace(",",".",$request->preco), 
             'quantidade' => $request->quantidade,
+            'cor' => $request->cor,
 
         ]);
+        echo "Produto cadastrado com sucesso!";
+        return view('show');
 
-        return "Produto cadastrado com sucesso!";
+
     }
 
     public function show($id){
@@ -40,6 +43,7 @@ class ProdutosController extends Controller
             'nome' => $request->nome,
             'custo' => str_replace(",",".",$request->custo),
             'preco' =>  str_replace(",",".",$request->preco), 
+            'cor' => $request->cor,
             'quantidade' => $request->quantidade,
         ]);
         return "Produto alterado com sucesso!";
