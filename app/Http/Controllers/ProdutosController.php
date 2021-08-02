@@ -14,8 +14,8 @@ class ProdutosController extends Controller
     Public function store(Request $request){
         Produto::create([
             'nome' => $request->nome,
-            'custo' => $request->custo,
-            'preco' => $request->preco,
+            'custo' => str_replace(",",".",$request->custo),
+            'preco' =>  str_replace(",",".",$request->preco), 
             'quantidade' => $request->quantidade,
 
         ]);
@@ -38,8 +38,8 @@ class ProdutosController extends Controller
 
         $produto->update([
             'nome' => $request->nome,
-            'custo' => $request->custo,
-            'preco' => $request->preco,
+            'custo' => str_replace(",",".",$request->custo),
+            'preco' =>  str_replace(",",".",$request->preco), 
             'quantidade' => $request->quantidade,
         ]);
         return "Produto alterado com sucesso!";
