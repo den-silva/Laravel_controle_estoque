@@ -59,4 +59,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
+
+### INFORMAÇÕES IMPORTANTES
+
+para executar este exemplo, tenha instalado o XAMPP versão 8.0.8-1 ou superior , composer (última versão disponível no site)
+
+Também será necessário atualizar o composer, caso ocorra algum erro na execução do aplicativo, segue abaixo o comando via terminal:
+
+composer update
+
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
