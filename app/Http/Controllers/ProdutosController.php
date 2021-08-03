@@ -21,7 +21,7 @@ class ProdutosController extends Controller
 
         ]);
         echo "Produto cadastrado com sucesso!";
-        return view('show');
+        return view('create');
 
 
     }
@@ -46,7 +46,8 @@ class ProdutosController extends Controller
             'cor' => $request->cor,
             'quantidade' => $request->quantidade,
         ]);
-        return "Produto alterado com sucesso!";
+        echo "Produto alterado com sucesso!";
+        return view("welcome");
     }
 
     public function delete($id){
@@ -57,6 +58,9 @@ class ProdutosController extends Controller
     public function destroy($id){
         $produto = Produto::findOrFail($id);
         $produto->delete();
-        return "Produto excluido com sucesso";
+         
+        
+         echo "Produto excluido com sucesso";
+         return view('welcome');
     }
 }

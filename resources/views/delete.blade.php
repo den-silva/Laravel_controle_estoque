@@ -2,7 +2,7 @@
 @section('title', 'Excluir produto')
 @section('content')
        
-    <div class="container-sm">
+    <div class="col-md-4 offset-4">
         <h1>Excluir produto</h1> 
         <div class="row justify-content-md-center">
             <form action="{{ route('excluir_produto', ['id' => $produto->id]) }}" method="POST">
