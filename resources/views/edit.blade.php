@@ -15,12 +15,13 @@
                 }
                 return num;
             }
-
     </script>
     <div class="container-sm">
 
         <div class= "col-md-4 offset-4"> 
-            <h1>Edite seu Produto</h1>            
+            <h1>Edite seu Produto</h1>  <br>
+            <a href="/produtos/ver">Voltar</a>
+
             <form action="{{ route('alterar_produto', ['id' =>$produto->id])}}" method="POST">
                 @csrf
                 <div>
@@ -47,7 +48,7 @@
                             </div>-->
 
                             <div class="col-3">
-                                <input type="number" name="quantidade" class="form-control" id="txtqtd" value=0> <br>
+                                <input type="number" name="quantidade" class="form-control" id="txtqtd" value="{{$produto->quantidade}}"> <br>
                             </div>
 
                             <!--<div class="col-2">

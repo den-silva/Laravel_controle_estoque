@@ -20,7 +20,7 @@ class ProdutosController extends Controller
             'cor' => $request->cor,
         ]);
         echo "Produto cadastrado com sucesso!";
-        return view('create');
+        return view('welcome');
     }
 
     public function show(){
@@ -40,7 +40,7 @@ class ProdutosController extends Controller
         $produto->update([
             'nome' => $request->nome,
             'custo' => str_replace(",",".",$request->custo),
-            'preco' =>  str_replace(",",".",$request->preco), 
+            'preco' => str_replace(",",".",$request->preco), 
             'cor' => $request->cor,
             'quantidade' => $request->quantidade,
         ]);
@@ -60,5 +60,9 @@ class ProdutosController extends Controller
         
          echo "Produto excluido com sucesso";
          return view('welcome');
+    }
+
+    public function about(){
+        return view('about');
     }
 }

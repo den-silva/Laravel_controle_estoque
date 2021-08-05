@@ -34,37 +34,11 @@
                         
                         <div class="col-3">
                             <input type="number" name="quantidade" class="form-control" id="txtqtd" value=0> <br>
-                        </div>
-
-                       
-                    </div>
-                    
-                </div>
-                
+                        </div>                       
+                    </div>                    
+                </div>                
                 <button type="submit" class="btn btn-primary mb-3">Salvar</button>
             </form> 
-        </div>
-
-        <script>
-            var num = 12;
-            function adicionar(){
-                num ++;
-                document.getElementById("txtqtd").innerHTML = num;
-            }
-            function remover(){
-                var num = document.getElementById("txtqtd");
-                num --;
-                if(num == 0){
-                    return 0;
-                }
-                return num;
-            }
-
-            function myFunction() {
-                document.getElementById("txtqtd").innerHTML = 45;
-            }
-
-        </script>
-    </div>  
-
+        </div>        
+    </div>
 @endsection
