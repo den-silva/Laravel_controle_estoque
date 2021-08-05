@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>@yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js" integrity="sha512-RbMQw6xKGymv6bRMO4z5OxHBzzem7BPEQX7nTJC9G08A70gXdUka76Rvgey83MsSXrIEJddog0vxUKN6iTce2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         .footer{
@@ -17,11 +17,22 @@
             padding: 15px;
             bottom: 0;
             width: 100%;
-            position: relative;
+            position: fixed;
         }
         .a-link{
             text-decoration: none;
             color: white;
+        }
+        .a-link:hover{
+            color:white;
+        }
+
+        .headTable{
+            font-weight:bold;
+        }
+
+        .colorSelector{
+            height:4rem;
         }
     </style>
     

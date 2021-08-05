@@ -19,12 +19,13 @@ class ProdutosController extends Controller
             'quantidade' => $request->quantidade,
             'cor' => $request->cor,
         ]);
-        echo "Produto cadastrado com sucesso!";
-        return view('welcome');
+        $mensagem = "Produto cadastrado com sucesso!";
+        $produtos = Produto::all();
+        return view('show', ['produtos' =>$produtos, 'mensagem'=> $mensagem]);
     }
 
     public function show(){
-        //$produto = Produto::findOrFail($id);
+        
         $produtos = Produto::all();
         return view('show', ['produtos' =>$produtos]);
     }
@@ -44,8 +45,9 @@ class ProdutosController extends Controller
             'cor' => $request->cor,
             'quantidade' => $request->quantidade,
         ]);
-        echo "Produto alterado com sucesso!";
-        return view("welcome");
+        $mensagem = "Produto alterado com sucesso!";
+        $produtos = Produto::all();
+        return view('show', ['produtos' =>$produtos, 'mensagem'=> $mensagem]);
     }
 
     public function delete($id){
@@ -58,8 +60,9 @@ class ProdutosController extends Controller
         $produto->delete();
          
         
-         echo "Produto excluido com sucesso";
-         return view('welcome');
+        $mensagem = "Produto excluido com sucesso";
+        $produtos = Produto::all();
+        return view('show', ['produtos' =>$produtos, 'mensagem'=> $mensagem]);
     }
 
     public function about(){

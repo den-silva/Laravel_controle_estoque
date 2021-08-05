@@ -1,13 +1,11 @@
 @extends('layouts.main')
 @section('title', 'Criar produto')
 @section('content')
-    <div class="col-">
-    
-    </div>    
+      
     <div class="container-sm">
         <div class= "col-md-4 offset-4">
             <h1>Cadastre aqui seu Produto</h1>
-            <a href="/produtos/ver">Voltar</a>
+            <a class="a-link" href="/produtos/ver"><button class="btn btn-primary mb-3"><ion-icon name="arrow-back-outline"></ion-icon></button></a>
             <form action="{{ route('registrar_produto')}}" method="POST">
                 @csrf
                 <div>
@@ -17,17 +15,22 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="">Custo</label> <br>
-                                <input type="text" name="custo" class="form-control" > <br>
+                                <input type="text" name="custo" class="form-control" id="custo"> <br>
                             </div>
                             
                             <div class="col-md-6">
                                 <label for="">Preço</label> <br>
-                                <input type="text" name="preco" class="form-control" > <br>
+                                <input type="text" name="preco" class="form-control" id="preco"> <br>
                             </div>
+
+
                         </div>
                     </div>
-                    <label for="">Cor</label> <br>
-                    <input type="text" name="cor" class="form-control"> <br>
+                    <div class="col-md-3">
+                        <label for="">Cor</label> <br>
+                        <input type="color" name="cor" class="form-control colorSelector" id="cor"> <br>
+                    </div>
+                    
 
                     <label for="">Quantidade</label> <br> <br> 
                     <div class="row">
@@ -37,8 +40,13 @@
                         </div>                       
                     </div>                    
                 </div>                
-                <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+                <button type="submit" class="btn btn-primary mb-3">Salvar <ion-icon name="checkmark-outline"></ion-icon></button>
             </form> 
         </div>        
     </div>
+
+    <script>
+        VMasker(document.getElementById("custo")).maskMoney(); 
+        VMasker(document.getElementById("preco")).maskMoney();         
+    </script>
 @endsection

@@ -20,26 +20,28 @@
 
         <div class= "col-md-4 offset-4"> 
             <h1>Edite seu Produto</h1>  <br>
-            <a href="/produtos/ver">Voltar</a>
-
+            <a class="a-link" href="/produtos/ver"><button class="btn btn-primary mb-3"><ion-icon name="arrow-back-outline"></ion-icon></button></a>
             <form action="{{ route('alterar_produto', ['id' =>$produto->id])}}" method="POST">
                 @csrf
                 <div>
                     <label for="">Nome</label> <br>
                     <input type="text" name="nome" value="{{ $produto->nome }}" class="form-control"> <br>
                     <div class="row g-3">
-                        <div class="col-auto">
-                            <label for="">Custo</label> <br>
-                            <input type="text" name="custo" value="{{str_replace('.',',',$produto->custo)}}"class="form-control" id="money"> <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Custo</label> <br>
+                                <input type="text" name="custo" value="{{str_replace('.',',',$produto->custo)}}"class="form-control" id="money"> <br>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="">Preço</label> <br>
+                                <input type="text" name="preco" value="{{str_replace('.',',',$produto->preco)}}"class="form-control" id="money"> <br>
+                            </div>
                         </div>
                         
-                        <div class="col-auto">
-                            <label for="">Preço</label> <br>
-                            <input type="text" name="preco" value="{{str_replace('.',',',$produto->preco)}}"class="form-control" id="money"> <br>
-                        </div>
                     </div>
                     <label for="">Cor</label> <br>
-                    <input type="text" name="cor" value="{{$produto->cor}}"class="form-control"> <br> 
+                    <input type="color" name="cor" value="{{$produto->cor}}"class="form-control colorSelector"> <br> 
 
                     <label for="">Quantidade</label> <br> <br> 
                         <div class="row">
