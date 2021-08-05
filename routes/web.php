@@ -18,7 +18,7 @@ Route::get ('/produtos/novo', 'App\Http\Controllers\ProdutosController@create');
 Route::post('/produtos/novo', 'App\Http\Controllers\ProdutosController@store')->name('registrar_produto');
 
 //parte 2
-Route::get('/{id}', 'App\Http\Controllers\ProdutosController@show');
+Route::get('/produtos/ver', 'App\Http\Controllers\ProdutosController@show');
 Route::get('/produtos/editar/{id}', 'App\Http\Controllers\ProdutosController@edit');
 Route::post('/produtos/editar/{id}', 'App\Http\Controllers\ProdutosController@update')->name('alterar_produto');
 Route::get('/produtos/excluir/{id}', 'App\Http\Controllers\ProdutosController@delete');

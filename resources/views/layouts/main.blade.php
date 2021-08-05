@@ -19,6 +19,10 @@
             width: 100%;
             position: relative;
         }
+        .a-link{
+            text-decoration: none;
+            color: white;
+        }
     </style>
     
 </head>
@@ -33,7 +37,7 @@
                             <a href="/" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/produtos/novo" class="nav-link">Produtos</a>
+                            <a href="/produtos/ver" class="nav-link">Produtos</a>
                         </li>
 
                         <li class="nav-item">

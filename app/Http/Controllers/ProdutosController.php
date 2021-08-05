@@ -18,17 +18,15 @@ class ProdutosController extends Controller
             'preco' =>  str_replace(",",".",$request->preco), 
             'quantidade' => $request->quantidade,
             'cor' => $request->cor,
-
         ]);
         echo "Produto cadastrado com sucesso!";
         return view('create');
-
-
     }
 
-    public function show($id){
-        $produto = Produto::findOrFail($id);
-        return view('show', ['produto'=> $produto]);
+    public function show(){
+        //$produto = Produto::findOrFail($id);
+        $produtos = Produto::all();
+        return view('show', ['produtos' =>$produtos]);
     }
 
     public function edit($id){

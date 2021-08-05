@@ -13,3 +13,8 @@ input[type=number] {
 body{
     color:red;
 }
+
+a-link{
+    text-decoration: none;
+    color: white;
+}
